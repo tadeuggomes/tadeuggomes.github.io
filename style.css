@@ -173,12 +173,13 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 35px 20px;
     background-color: var(--cor-fundo-secundario);
 }
 
 .home-sobre-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 50px; /* Reduzido */
     max-width: 1100px;
@@ -246,9 +247,9 @@ header nav a.active {
 }
 
 .foto-perfil {
-    width: 220px; /* Reduzido */
-    height: 220px; /* Reduzido */
-    border-radius: 50%;
+    width: 230px; /* Reduzido */
+    height: 230px; /* Reduzido */
+    border-radius: 10px;
     border: 4px solid var(--cor-borda); /* Reduzido */
     object-fit: cover;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
@@ -285,7 +286,12 @@ header nav a.active {
     border-color: var(--cor-destaque);
     box-shadow: 0 0 15px var(--cor-brilho);
 }
-.info-item .icone { font-size: 1.5em; }
+.info-item .icone {
+    font-size: 1.5em;
+    color: var(--cor-destaque); /* <-- ADICIONE ESTA LINHA */
+    width: 25px; /* Adicionado para garantir o alinhamento */
+    text-align: center; /* Adicionado para garantir o alinhamento */
+}
 .info-item h3 { margin: 0 0 5px; font-size: 1em; color: var(--cor-texto-secundario); }
 .info-item p { margin: 0; font-size: 1.1em; }
 .instituicao { font-size: 0.9em; color: var(--cor-destaque); }
@@ -351,8 +357,8 @@ header nav a.active {
 #contato { background-color: var(--cor-fundo-secundario); }
 .contato-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px; /* Reduzido */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* <-- Diminuímos para 220px */
+    gap: 25px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -429,4 +435,22 @@ footer {
     .sublinhado {
         font-size: 2em;
     }
+}
+/* Estilos para o wrapper do título e período */
+.titulo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+/* Estilo do badge "3º Período" */
+.status-periodo {
+    
+    color: var(--cor-destaque-hover);
+    padding: 2px 10px;
+    border-radius: 1px;
+    font-size: 0.7em;
+    font-weight: 600;
+    font-family: var(--fonte-mono);
 }
