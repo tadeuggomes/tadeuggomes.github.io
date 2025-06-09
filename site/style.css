@@ -659,3 +659,24 @@ body {
     padding: 20px 15px;
   }
 }
+.menu-mobile {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-mobile {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+  }
+  
+  nav ul.active {
+    display: flex;
+  }
+}
