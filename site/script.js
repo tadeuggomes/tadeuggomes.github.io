@@ -39,4 +39,33 @@ function copiarTexto(texto, tipo) {
     feedback.style.display = 'none';
   }, 2000);
 }
+// Menu hamburguer (adicione este HTML antes)
+<button class="menu-mobile">☰</button>
 
+// E este CSS
+.menu-mobile {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-mobile {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+  }
+  
+  nav ul.active {
+    display: flex;
+  }
+}
+
+// E este JavaScript
+document.querySelector('.menu-mobile').addEventListener('click', () => {
+  document.querySelector('nav ul').classList.toggle('active');
+});

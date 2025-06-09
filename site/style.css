@@ -609,3 +609,53 @@ body {
   color: #555;
   font-size: 0.9rem;
 }
+
+
+.projeto-highlights ul {
+  margin: 8px 0 0 20px;
+}
+
+.projeto-highlights li {
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.tecnologias {
+  font-size: 0.9em;
+  color: #000000;
+  margin: 15px 0;
+}
+/* Estilos para telas menores que 768px (mobile) */
+@media (max-width: 768px) {
+  /* Ajuste do header */
+  header .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Ajuste da seção sobre */
+  .sobre-mim-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajuste dos projetos */
+  .projetos-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajuste de fontes */
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Ajuste de padding geral */
+  section {
+    padding: 20px 15px;
+  }
+}
