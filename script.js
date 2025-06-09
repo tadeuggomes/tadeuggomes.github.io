@@ -1,47 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Portfólio carregado com sucesso!");
-});
-document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  });
-});
-// Função para copiar e-mail
-function copiarTexto(texto) {
-  navigator.clipboard.writeText(texto);
-  
-  const card = event.currentTarget;
-  const feedback = card.querySelector('.copiado-feedback');
-  
-  feedback.style.display = 'block';
-  setTimeout(() => {
-    feedback.style.display = 'none';
-  }, 2000);
-}
-function copiarTexto(texto, tipo) {
-  // Remove caracteres não numéricos se for telefone
-  const textoParaCopiar = tipo === 'tel' ? texto.replace(/\D/g, '') : texto;
-  
-  navigator.clipboard.writeText(textoParaCopiar);
-  
-  // Mostra feedback visual específico
-  const feedback = document.getElementById(`${tipo}-feedback`);
-  feedback.style.display = 'block';
-  
-  // Esconde após 2 segundos
-  setTimeout(() => {
-    feedback.style.display = 'none';
-  }, 2000);
+// Função para copiar texto (inalterada)
+function copiarTexto(texto, idFeedback) {
+    navigator.clipboard.writeText(texto).then(() => {
+        const feedbackEl = document.getElementById(idFeedback + '-feedback');
+        feedbackEl.classList.add('visivel');
+        setTimeout(() => {
+            feedbackEl.classList.remove('visivel');
+        }, 2000);
+    }).catch(err => {
+        console.error('Erro ao copiar texto: ', err);
+        alert('Não foi possível copiar o texto.');
+    });
 }
 
-<button class="menu-mobile">☰</button>
+// Função para o efeito de digitação (inalterada)
 
-document.querySelector('.menu-mobile').addEventListener('click', () => {
-  document.querySelector('nav ul').classList.toggle('active');
+
+
+// ---- NOVO CÓDIGO PARA DEIXAR O LINK DO MENU ATIVO ----
+function menuAtivoScroll() {
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('header nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === entry.target.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, {
+        rootMargin: '-50% 0px -50% 0px' // Ativa o link quando a seção está no meio da tela
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+}
+
+
+// Inicia os efeitos quando a página carregar
+document.addEventListener('DOMContentLoaded', () => {
+    efeitoDigitar('#titulo-digitado');
+    menuAtivoScroll(); // Ativa a nova função do menu
 });
