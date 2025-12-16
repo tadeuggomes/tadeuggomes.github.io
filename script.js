@@ -1,22 +1,34 @@
-// Função para copiar texto (inalterada)
-function copiarTexto(texto, idFeedback) {
-    navigator.clipboard.writeText(texto).then(() => {
-        const feedbackEl = document.getElementById(idFeedback + '-feedback');
-        feedbackEl.classList.add('visivel');
+function efeitoDigitar(seletor) {
+    const elemento = document.querySelector(seletor);
+    if (!elemento) return;
+
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    
+    elemento.style.visibility = 'visible';
+
+    textoArray.forEach((letra, i) => {
         setTimeout(() => {
-            feedbackEl.classList.remove('visivel');
-        }, 2000);
-    }).catch(err => {
-        console.error('Erro ao copiar texto: ', err);
-        alert('Não foi possível copiar o texto.');
+            elemento.innerHTML += letra;
+        }, 75 * i);
     });
 }
 
-// Função para o efeito de digitação (inalterada)
+function copiarTexto(texto, idFeedback) {
+    navigator.clipboard.writeText(texto).then(() => {
+        const feedbackEl = document.getElementById(idFeedback + '-feedback');
+        if (feedbackEl) {
+            feedbackEl.classList.add('visivel');
+            setTimeout(() => {
+                feedbackEl.classList.remove('visivel');
+            }, 2000);
+        }
+    }).catch(err => {
+        console.error('Erro ao copiar texto: ', err);
+        alert('Não foi possível copiar o texto automaticamente.');
+    });
+}
 
-
-
-// ---- NOVO CÓDIGO PARA DEIXAR O LINK DO MENU ATIVO ----
 function menuAtivoScroll() {
     const sections = document.querySelectorAll('main section[id]');
     const navLinks = document.querySelectorAll('header nav a');
@@ -33,7 +45,7 @@ function menuAtivoScroll() {
             }
         });
     }, {
-        rootMargin: '-50% 0px -50% 0px' // Ativa o link quando a seção está no meio da tela
+        rootMargin: '-50% 0px -50% 0px'
     });
 
     sections.forEach(section => {
@@ -41,9 +53,7 @@ function menuAtivoScroll() {
     });
 }
 
-
-// Inicia os efeitos quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {
     efeitoDigitar('#titulo-digitado');
-    menuAtivoScroll(); // Ativa a nova função do menu
+    menuAtivoScroll();
 });

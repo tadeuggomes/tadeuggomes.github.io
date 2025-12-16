@@ -14,11 +14,13 @@
 <body>
     <header>
         <div class="container">
-            <h1 >Portfólio</h1>
+            <h1>Portfólio</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#certificados">Certificados</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -29,15 +31,20 @@
         <section id="home">
             <div class="home-sobre-container">
                 <div class="texto-container">
-                    <h2 class="home-titulo" id="titulo-digitado">Olá, eu sou <span class="destaque-nome">Jorge Tadeu Filho</span>!</h2>
+                    <h2 class="home-titulo">
+                        <span id="titulo-digitado">Olá, eu sou</span> 
+                        <br>
+                        <span class="destaque-nome">Jorge Tadeu Filho!</span>
+                    </h2>
+                    
                     <p class="home-destaque">
-                        Meu objetivo é compartilhar os trabalhos que desenvolvo na minha jornada, sempre buscando entregar soluções criativas, inovadoras e que tragam resultados.
+                        Transformo linhas de código em soluções estratégicas. Meu foco é o desenvolvimento Full Stack, unindo a robustez do C e Java com a agilidade das soluções web modernas.
                     </p>
                     <div class="home-lista-container">
-                        <h3 class="home-subtitulo">Aqui você encontrará:</h3>
+                        <h3 class="home-subtitulo">Destaques da minha jornada:</h3>
                         <ul class="home-lista">
-                            <li class="home-item"><span>Projetos da faculdade.</span></li>
-                            <li class="home-item"><span>Formas de entrar em contato.</span></li>
+                            <li class="home-item"><span>Soluções em C, Web, Python e Java.</span></li>
+                            <li class="home-item"><span>Gestão de Projetos, E-commerce e Marketing.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -47,115 +54,189 @@
                         <img class="foto-perfil" src="imagens/Foto.jpeg" alt="Foto de Jorge Tadeu">
                     </div>
                     <div class="info-container">
-    
-
-    <div class="info-item">
-    <span class="icone"><i class="fa-solid fa-graduation-cap"></i></span>
-    <div>
-        <div >
-            <h3>Cursando </h3>
-            
-        </div>
-        <p><span class="instituicao">3º Período</span> <br>Bacharelado em Sistemas de Informação na <span class="instituicao">CESAR School</span></p>
-    </div>
-</div>
-    <div class="info-item">
-        <span class="icone"><i class="fa-solid fa-laptop-code"></i></span>
-        <div>
-            <h3>Área de Interesse</h3>
-            <p>Desenvolvimento Full Stack</p>
-        </div>
-    </div>
-</div>
+                        <div class="info-item">
+                            <span class="icone"><i class="fa-solid fa-graduation-cap"></i></span>
+                            <div>
+                                <div>
+                                    <h3>Formação Acadêmica</h3>
+                                </div>
+                                <p><span class="instituicao">4º Período</span> <br>Sistemas de Informação na <span class="instituicao">CESAR School</span></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icone"><i class="fa-solid fa-laptop-code"></i></span>
+                            <div>
+                                <h3>Interrese em:</h3>
+                                <p>Web Full Stack • UX/UI • C • Python • Java • Gestão de projetos  </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="projetos" class="centralizar">
-            <h2 class="sublinhado">Projetos</h2>
+            <h2 class="sublinhado">Projetos em Destaque</h2>
             <div class="projetos-container">
-                 <div class="projeto">
+                
+                <div class="projeto">
+                    <img src="./imagens/gestao viva.png" alt="Interface do Gestão Viva" onerror="this.src='https://via.placeholder.com/400x200?text=Gestao+Viva'">
+                    <div class="projeto-info">
+                        <h3>Gestão Viva</h3>
+                        <p>Plataforma estratégica desenvolvida para validação e gerenciamento de projetos. Combina a robustez do Java no backend com uma interface acessível via Google Sites, focando em organização de sprints e entregáveis.</p>
+                        <p class="tecnologias">
+                            <span>Java</span> • <span>Gestão de Sprints</span> • <span>Validação de Requisitos</span>
+                        </p>
+                        <a href="https://sites.google.com/cesar.school/gestaoviva/p%C3%A1gina-inicial?authuser=0" target="_blank">Ver detalhes</a>
+                    </div>
+                </div>
+
+                <div class="projeto">
                     <img src="imagens/flowstock.jpeg" alt="Imagem do projeto FlowStock">
                     <div class="projeto-info">
                         <h3>FlowStock</h3>
-                        <p>Sistema de gerenciamento de estoque para comerciantes de bebidas, desenvolvido em Python com armazenamento em JSON. Projeto criado nas disciplinas de Projetos 1 e Fundamentos de Programação, implementando operações CRUD completas.</p>
+                        <p>Sistema de gerenciamento de estoque para comerciantes de bebidas, desenvolvido em Python com persistência em JSON. Foco em operações CRUD otimizadas e usabilidade para o pequeno negócio.</p>
                         <p class="tecnologias">
-                            <span>Controle de inventário</span> • <span>CRUD completo</span> • <span>Desenvolvimento em equipe</span> • <span>Python + JSON</span>
+                            <span>Python + JSON</span> • <span>CRUD Otimizado</span> • <span>Automação</span>
                         </p>
-                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_desenvolvedor-projetos-cesarschool-activity-7274854877833433088-X8F0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ver projeto</a>
+                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_desenvolvedor-projetos-cesarschool-activity-7274854877833433088-X8F0" target="_blank">Ver projeto</a>
                     </div>
                 </div>
+
                 <div class="projeto">
                     <img src="imagens/B.O.M.B.A (1).png" alt="Imagem do projeto B.O.M.B.A">
                     <div class="projeto-info">
-                        <h3>B.O.M.B.A</h3>
-                        <p>Projeto "Bomba" desenvolvido para Sistemas Digitais e Introdução a Computação, integrando hardware (Arduino/sensores) e software (C++). Simula um sistema de controle digital aplicando conceitos de eletrônica e programação de microcontroladores.</p>
-                         <p class="tecnologias">
-                            <span>Arduino + sensores</span> • <span>Programação em C++</span> • <span>Prototipagem eletrônica</span> • <span>Lógica digital aplicada</span>
+                        <h3>B.O.M.B.A (IoT)</h3>
+                        <p>Sistema de controle digital integrando hardware (Arduino) e software (C++). Uma aplicação prática de eletrônica e lógica digital para resolução de problemas em tempo real.</p>
+                        <p class="tecnologias">
+                            <span>C++</span> • <span>Arduino</span> • <span>Sistemas Embarcados</span>
                         </p>
                         <a href="https://tadeuggomes.github.io/bomba/" target="_blank">Ver projeto</a>
                     </div>
                 </div>
-                 <div class="projeto">
+
+                <div class="projeto">
                     <img src="imagens/Design sem nome (4).png" alt="Imagem da logo da IntegraTur">
                     <div class="projeto-info">
                         <h3>IntegraTur</h3>
-                        <p>É um sistema desenvolvido para integrar as Secretarias de Turismo e Cultura do Recife, promovendo comunicação eficiente e troca de informações. O objetivo é reduzir retrabalho, otimizar recursos e melhorar a gestão de eventos. Projeto desenvolvido nas disciplinas de Projetos 2 e Fundamentos de Desenvolvimento de Software.</p>
+                        <p>Solução de integração governamental para as Secretarias de Turismo e Cultura do Recife. O sistema centraliza dados para eliminar retrabalho e otimizar a gestão de grandes eventos.</p>
                         <p class="tecnologias">
-                            <span>Gestão de eventos</span> • <span>Otimização de recursos</span> • <span>Integração de sistemas</span>
+                            <span>Integração de Sistemas</span> • <span>Gestão Pública</span> • <span>Eficiência de Dados</span>
                         </p>
-                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_esse-final-de-semana-tivemos-a-oportunidade-activity-7337640219493515264-pzDT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ver projeto</a>
+                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_esse-final-de-semana-tivemos-a-oportunidade-activity-7337640219493515264-pzDT" target="_blank">Ver projeto</a>
                     </div>
                 </div>
+
                 <div class="projeto">
                     <img src="imagens/hacker.png" alt="Imagem do projeto CyberTerminal Hacker">
                     <div class="projeto-info">
                         <h3>CyberTerminal Hacker</h3>
-                        <p>Jogo de digitação desenvolvido em C para a cadeira de Programação Imperativa e Funcional. Defenda seu terminal digitando combinações de letras em 3 níveis de dificuldade crescente, com sistema de vidas, pontuação e cronômetro.</p>
-                         <p class="tecnologias">
-                            <span>Teste de digitação</span> • <span>3 fases de dificuldade</span> • <span>Sistema de vidas e pontuação</span>
+                        <p>Gamificação desenvolvida em C para testar velocidade e precisão de digitação. Conta com níveis de dificuldade progressiva e sistemas de pontuação dinâmica.</p>
+                        <p class="tecnologias">
+                            <span>Linguagem C</span> • <span>Gamificação</span> • <span>Algoritmos de Input</span>
                         </p>
-                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_apresentamos-o-cyberterminal-hacker-um-jogo-activity-7337825822843584512-Rgs7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ver projeto</a>
+                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_apresentamos-o-cyberterminal-hacker-um-jogo-activity-7337825822843584512-Rgs7" target="_blank">Ver projeto</a>
                     </div>
                 </div>
+
                 <div class="projeto">
                     <img src="imagens/Captura de tela 2025-06-08 231249.png" alt="Imagem do projeto Pacroissant-Lógico">
                     <div class="projeto-info">
                         <h3>Pacroissant-Lógico</h3>
-                        <p>Versão educativa do Pac-Man desenvolvida em C para a cadeira de Lógica para Programação. O jogador coleta valores V/F na ordem correta da tabela verdade, evitando fantasmas. Combina lógica booleana com mecânicas de jogo clássicas.</p>
+                        <p>Releitura educativa do Pac-Man focada no ensino de Lógica Booleana. O jogo exige que o usuário resolva tabelas-verdade em tempo real para avançar.</p>
                         <p class="tecnologias">
-                           <span>Ensino de tabela verdade</span> • <span>Fantasmas como obstáculos</span> • <span>3 vidas para resolver</span>
+                            <span>Lógica Booleana</span> • <span>Design de Jogos</span> • <span>Linguagem C</span>
                         </p>
-                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_projeto-final-de-l%C3%B3gica-para-computa%C3%A7%C3%A3o-na-activity-7337897975064449025-78qz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ver projeto</a>
+                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_projeto-final-de-l%C3%B3gica-para-computa%C3%A7%C3%A3o-na-activity-7337897975064449025-78qz" target="_blank">Ver projeto</a>
                     </div>
                 </div>
-                 <div class="projeto">
+
+                <div class="projeto">
+                    <img src="./imagens/Captura de tela 2025-12-15 215631.png" alt="Código Batalha Naval em C" onerror="this.src='https://via.placeholder.com/400x200?text=Batalha+Naval+C'">
+                    <div class="projeto-info">
+                        <h3>Batalha Naval (Algoritmos Avançados)</h3>
+                        <p>Implementação complexa do clássico jogo de estratégia utilizando linguagem C. O projeto exigiu manipulação avançada de matrizes, alocação de memória e lógica condicional rigorosa para simular a IA do adversário.</p>
+                        <p class="tecnologias">
+                            <span>Linguagem C</span> • <span>Lógica de Matrizes</span> • <span>Desenvolvimento em Dupla</span>
+                        </p>
+                        <a href="https://github.com/tadeuggomes/PIF-Batalha-Naval" target="_blank">Ver projeto</a>
+                    </div>
+                </div>
+
+                <div class="projeto">
                     <img src="imagens/VASO INTELIGENTE.png" alt="Imagem do projeto VASO Inteligente">
                     <div class="projeto-info">
-                        <h3>Vaso Inteligente</h3>
-                        <p>Projeto para a disciplina de Interface Humano-Computador, combinando IoT e design sustentável para facilitar o cultivo urbano através de monitoramento automatizado de plantas.</p>
+                        <h3>Vaso Inteligente (UX/UI)</h3>
+                        <p>Projeto focado na experiência do usuário e IoT sustentável. Prototipagem de alta fidelidade para um sistema de monitoramento automatizado de plantas.</p>
                         <p class="tecnologias">
-                            <span>Prototipagem Figma</span> • <span>UI/UX Design</span> • <span>Pesquisa com usuários</span> • <span>Sustentabilidade</span>
+                            <span>Figma</span> • <span>UX Research</span> • <span>IoT Conceitual</span>
                         </p>
-                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_vaso-inteligente-projeto-de-interface-activity-7337888641525936130-m8xr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ver projeto</a>
-                    </div>
-                </div>
-                 <div class="projeto">
-                    <img src="imagens/portugolstudio.jpg" alt="Imagem do projeto em Portugol">
-                    <div class="projeto-info">
-                        <h3>Projeto em Portugol</h3>
-                        <p>Primeiro contato com programação na disciplina de Lógica de Programação. Utilizando Portugol Studio, criei algoritmos com condicionais, laços de repetição e manipulação de variáveis, construindo minha base lógica.</p>
-                        <p class="tecnologias">
-                            <span>Estruturas condicionais</span> • <span>Laços de repetição</span> • <span>Operações matemáticas</span>
-                        </p>
-                        <a href="https://github.com/tadeuggomes/Projetos" target="_blank">Ver projeto</a>
+                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_vaso-inteligente-projeto-de-interface-activity-7337888641525936130-m8xr" target="_blank">Ver projeto</a>
                     </div>
                 </div>
             </div>
         </section>
 
+  <section id="artigos" class="centralizar">
+    <h2 class="sublinhado">Artigos</h2>
+    <div class="projetos-container">
+        <div class="projeto">
+            <div style="height: 150px; display: flex; align-items: center; justify-content: center; background: var(--cor-fundo-secundario); font-size: 4em; color: var(--cor-destaque);">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="projeto-info">
+                <h3>IA na Cibersegurança: Detecção de Fraudes e Ataques</h3>
+                <p>Artigo científico que investiga a dualidade da Inteligência Artificial na segurança da informação. O estudo analisa como técnicas de Machine Learning e Deep Learning superam defesas tradicionais na detecção de ameaças em tempo real, ao mesmo tempo que discute os riscos de ataques adversariais e a "corrida armamentista digital".</p>
+                <p class="tecnologias">
+                    <span>Cibersegurança</span> • <span>Deep Learning</span> • <span>Detecção de Ameaças</span>
+                </p>
+                <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_como-a-intelig%C3%AAncia-artificial-atua-no-campo-activity-7406417998061748225-fJnq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ler Artigo Completo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="certificados" class="centralizar">
+            <h2 class="sublinhado">Certificados e Qualificações</h2>
+            <div class="projetos-container">
+                
+                <div class="projeto">
+                    <div class="projeto-info">
+                        <h3><i class="fa-brands fa-python" style="color: var(--cor-destaque); margin-right: 8px;"></i> Python Essentials 2</h3>
+                        <p>Formação avançada em Python pela Cisco, focada em estruturas de dados complexas, programação orientada a objetos e desenvolvimento de scripts robustos.</p>
+                        <p class="tecnologias"><span>Cisco Networking Academy</span> • <span>Jul 2025</span></p>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <div class="projeto-info">
+                        <h3><i class="fa-brands fa-js" style="color: var(--cor-destaque); margin-right: 8px;"></i> JavaScript Essentials 2</h3>
+                        <p>Especialização em desenvolvimento Front-end e interatividade web. Domínio de manipulação de DOM, eventos e programação assíncrona.</p>
+                        <p class="tecnologias"><span>Cisco Networking Academy</span> • <span>Jul 2025</span></p>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <div class="projeto-info">
+                        <h3><i class="fa-solid fa-wifi" style="color: var(--cor-destaque); margin-right: 8px;"></i> Introdução à IoT</h3>
+                        <p>Capacitação em Internet das Coisas e Transformação Digital. Compreensão da conexão entre sistemas físicos e digitais e segurança em redes IoT.</p>
+                        <p class="tecnologias"><span>Cisco Networking Academy</span> • <span>Jul 2025</span></p>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <div class="projeto-info">
+                        <h3><i class="fa-solid fa-microchip" style="color: var(--cor-destaque); margin-right: 8px;"></i> Fundamentos de Hardware</h3>
+                        <p>Competência técnica em arquitetura de computadores, manutenção de sistemas e configuração de componentes de hardware.</p>
+                        <p class="tecnologias"><span>Cisco Networking Academy</span> • <span>Jul 2025</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section id="contato" class="centralizar">
-            <h2 class="sublinhado">Entre em Contato</h2>
+            <h2 class="sublinhado">Vamos conversar?</h2>
             <div class="contato-grid">
                 <div class="contato-card" onclick="copiarTexto('jtgsf@cesar.school', 'email')" data-copiable>
                     <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="contato-icone">
@@ -197,5 +278,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>

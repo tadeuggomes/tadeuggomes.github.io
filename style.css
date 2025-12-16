@@ -1,4 +1,3 @@
-/* --- GERAL E EFEITOS DE PROGRAMADOR --- */
 :root {
     --cor-fundo-principal: #0d1117;
     --cor-fundo-secundario: #161b22;
@@ -71,15 +70,15 @@ a:hover {
 }
 
 section { 
-    padding: 70px 20px; /* Reduzido */
+    padding: 70px 20px;
 }
 .centralizar { text-align: center; }
 
 .sublinhado {
     position: relative;
     padding-bottom: 20px;
-    margin-bottom: 50px; /* Reduzido */
-    font-size: 2.2em; /* Reduzido */
+    margin-bottom: 50px;
+    font-size: 2.2em;
     display: inline-block;
 }
 
@@ -100,7 +99,6 @@ section {
     text-shadow: 0 0 10px var(--cor-brilho);
 }
 
-/* --- HEADER --- */
 header {
     background-color: rgba(13, 17, 23, 0.8);
     backdrop-filter: blur(10px);
@@ -166,10 +164,8 @@ header nav a.active {
     text-shadow: 0 0 8px var(--cor-brilho);
 }
 
-
-/* --- HOME / SOBRE --- */
 #home {
-    min-height: 85vh; /* Reduzido */
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +177,7 @@ header nav a.active {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 50px; /* Reduzido */
+    gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -199,13 +195,13 @@ header nav a.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px; /* Reduzido */
+    gap: 25px;
 }
 
 .home-titulo {
-    font-size: 2.8em; /* Reduzido */
+    font-size: 2.8em;
     margin-bottom: 10px;
-    min-height: 110px; /* Reduzido */
+    min-height: 110px;
 }
 
 .home-titulo::after {
@@ -221,13 +217,13 @@ header nav a.active {
 }
 
 .home-destaque {
-    font-size: 1.1em; /* Reduzido */
+    font-size: 1.1em;
     color: var(--cor-texto-secundario);
     max-width: 500px;
     margin-bottom: 30px;
 }
 
-.home-subtitulo { font-size: 1.2em; margin-bottom: 15px; } /* Reduzido */
+.home-subtitulo { font-size: 1.2em; margin-bottom: 15px; }
 .home-lista { list-style: none; padding: 0; }
 .home-item {
     color: var(--cor-texto-secundario);
@@ -247,10 +243,10 @@ header nav a.active {
 }
 
 .foto-perfil {
-    width: 230px; /* Reduzido */
-    height: 230px; /* Reduzido */
+    width: 230px;
+    height: 230px;
     border-radius: 10px;
-    border: 4px solid var(--cor-borda); /* Reduzido */
+    border: 4px solid var(--cor-borda);
     object-fit: cover;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
     animation: pulse-glow 3s infinite ease-in-out;
@@ -288,21 +284,20 @@ header nav a.active {
 }
 .info-item .icone {
     font-size: 1.5em;
-    color: var(--cor-destaque); /* <-- ADICIONE ESTA LINHA */
-    width: 25px; /* Adicionado para garantir o alinhamento */
-    text-align: center; /* Adicionado para garantir o alinhamento */
+    color: var(--cor-destaque);
+    width: 25px;
+    text-align: center;
 }
 .info-item h3 { margin: 0 0 5px; font-size: 1em; color: var(--cor-texto-secundario); }
 .info-item p { margin: 0; font-size: 1.1em; }
 .instituicao { font-size: 0.9em; color: var(--cor-destaque); }
 
 
-/* --- PROJETOS --- */
 #projetos { background-color: var(--cor-fundo-principal); }
 .projetos-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px; /* Reduzido */
+    gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -353,11 +348,10 @@ header nav a.active {
     box-shadow: 0 0 15px var(--cor-brilho);
 }
 
-/* --- CONTATO --- */
 #contato { background-color: var(--cor-fundo-secundario); }
 .contato-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* <-- Diminuímos para 220px */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 25px;
     max-width: 1000px;
     margin: 0 auto;
@@ -398,7 +392,6 @@ header nav a.active {
 }
 .feedback-copia.visivel { visibility: visible; opacity: 1; }
 
-/* --- FOOTER --- */
 footer {
     padding: 20px;
     background-color: var(--cor-fundo-principal);
@@ -407,9 +400,6 @@ footer {
     font-size: 0.9em;
 }
 
-/* =============================================== */
-/* --- AJUSTES PARA DISPOSITIVOS MÓVEIS (MEDIA QUERY) --- */
-/* =============================================== */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -436,7 +426,7 @@ footer {
         font-size: 2em;
     }
 }
-/* Estilos para o wrapper do título e período */
+
 .titulo-wrapper {
     display: flex;
     align-items: center;
@@ -444,9 +434,7 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Estilo do badge "3º Período" */
 .status-periodo {
-    
     color: var(--cor-destaque-hover);
     padding: 2px 10px;
     border-radius: 1px;
