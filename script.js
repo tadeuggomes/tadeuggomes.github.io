@@ -1,17 +1,31 @@
-function efeitoDigitar(seletor) {
-    const elemento = document.querySelector(seletor);
-    if (!elemento) return;
 
-    const textoArray = elemento.innerHTML.split('');
-    elemento.innerHTML = '';
+function iniciarEfeitoDigitacao() {
+    const elementoTitulo = document.getElementById("titulo-digitado");
+    if (!elementoTitulo) return;
     
-    elemento.style.visibility = 'visible';
+    const textoParaDigitar = 'Olá, eu sou <br> <span class="destaque-nome">Jorge Tadeu Filho!</span>';
+    let index = 0;
+    let textoAtual = '';
+    const velocidade = 80;
 
-    textoArray.forEach((letra, i) => {
-        setTimeout(() => {
-            elemento.innerHTML += letra;
-        }, 75 * i);
-    });
+    function digitar() {
+        if (index < textoParaDigitar.length) {
+            textoAtual += textoParaDigitar.charAt(index);
+            elementoTitulo.innerHTML = textoAtual;
+            index++;
+            
+            if (textoParaDigitar.charAt(index) === '<') {
+                while (textoParaDigitar.charAt(index) !== '>' && index < textoParaDigitar.length) {
+                    textoAtual += textoParaDigitar.charAt(index);
+                    index++;
+                }
+                textoAtual += '>';
+                index++;
+            }
+            setTimeout(digitar, velocidade);
+        }
+    }
+    digitar();
 }
 
 function copiarTexto(texto, idFeedback) {
@@ -53,49 +67,26 @@ function menuAtivoScroll() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    efeitoDigitar('#titulo-digitado');
-    menuAtivoScroll();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const elementoTitulo = document.getElementById("titulo-digitado");
-   
-    const textoParaDigitar = 'Olá, eu sou <br> <span class="destaque-nome">Jorge Tadeu Filho!</span>';
-    
-    let index = 0;
-    let textoAtual = '';
-    let velocidade = 80; 
-
-    function efeitoDigitacao() {
-        if (index < textoParaDigitar.length) {
-            textoAtual += textoParaDigitar.charAt(index);
-            elementoTitulo.innerHTML = textoAtual;
-            index++;
-          
-            if (textoParaDigitar.charAt(index) === '<') {
-                while (textoParaDigitar.charAt(index) !== '>' && index < textoParaDigitar.length) {
-                    textoAtual += textoParaDigitar.charAt(index);
-                    index++;
-                }
-                textoAtual += '>'; 
-                index++;
-            }
-            
-            setTimeout(efeitoDigitacao, velocidade);
-        }
-    }
-    efeitoDigitacao();
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
+function ativarMenuMobile() {
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
+    const navLinks = document.querySelectorAll("#nav-menu ul li a");
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener("click", () => {
             navMenu.classList.toggle("ativo");
         });
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("ativo");
+            });
+        });
     }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    iniciarEfeitoDigitacao();
+    menuAtivoScroll();
+    ativarMenuMobile();
 });
