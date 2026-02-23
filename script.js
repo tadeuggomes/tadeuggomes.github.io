@@ -60,33 +60,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const elementoTitulo = document.getElementById("titulo-digitado");
-    // Aqui definimos a frase completa, já com a quebra de linha e a sua classe de destaque
+   
     const textoParaDigitar = 'Olá, eu sou <br> <span class="destaque-nome">Jorge Tadeu Filho!</span>';
     
     let index = 0;
     let textoAtual = '';
-    let velocidade = 80; // Milissegundos por caractere. Diminua para ficar mais rápido!
+    let velocidade = 80; 
 
     function efeitoDigitacao() {
         if (index < textoParaDigitar.length) {
             textoAtual += textoParaDigitar.charAt(index);
             elementoTitulo.innerHTML = textoAtual;
             index++;
-            
-            // Lógica brilhante para injetar as tags HTML instantaneamente sem "digitar" os códigos
+          
             if (textoParaDigitar.charAt(index) === '<') {
                 while (textoParaDigitar.charAt(index) !== '>' && index < textoParaDigitar.length) {
                     textoAtual += textoParaDigitar.charAt(index);
                     index++;
                 }
-                textoAtual += '>'; // Adiciona o fechamento da tag
+                textoAtual += '>'; 
                 index++;
             }
             
             setTimeout(efeitoDigitacao, velocidade);
         }
     }
-
-    // Inicia o efeito
     efeitoDigitacao();
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("ativo");
+        });
+    }
 });
