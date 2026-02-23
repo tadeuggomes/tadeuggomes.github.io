@@ -18,8 +18,8 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#certificados">Certificados</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -31,11 +31,7 @@
         <section id="home">
             <div class="home-sobre-container">
                 <div class="texto-container">
-                    <h2 class="home-titulo">
-                        <span id="titulo-digitado">Olá, eu sou</span> 
-                        <br>
-                        <span class="destaque-nome">Jorge Tadeu Filho!</span>
-                    </h2>
+                    <h2 class="home-titulo" id="titulo-digitado"></h2>
                     
                     <p class="home-destaque">
                         Transformo linhas de código em soluções estratégicas. Meu foco é o desenvolvimento Full Stack, unindo a robustez do C e Java com a agilidade das soluções web modernas.
@@ -51,7 +47,7 @@
 
                 <div class="visual-container">
                     <div class="foto-container">
-                        <img class="foto-perfil" src="imagens/Foto.jpeg" alt="Foto de Jorge Tadeu">
+                        <img class="foto-perfil" src="imagens/fotominha123.jpeg" alt="Foto de Jorge Tadeu">
                     </div>
                     <div class="info-container">
                         <div class="info-item">
@@ -66,10 +62,29 @@
                         <div class="info-item">
                             <span class="icone"><i class="fa-solid fa-laptop-code"></i></span>
                             <div>
-                                <h3>Interrese em:</h3>
+                                <h3>Interesse em:</h3>
                                 <p>Web Full Stack • UX/UI • C • Python • Java • Gestão de projetos  </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="artigos" class="centralizar">
+            <h2 class="sublinhado">Produção Científica em Destaque</h2>
+            <div class="projetos-container">
+                <div class="projeto" style="border: 2px solid var(--cor-destaque); box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);">
+                    <div style="height: 150px; display: flex; align-items: center; justify-content: center; background: var(--cor-fundo-secundario); font-size: 4em; color: var(--cor-destaque);">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>IA na Cibersegurança: Detecção de Fraudes e Ataques</h3>
+                        <p>Artigo científico que investiga a dualidade da Inteligência Artificial na segurança da informação. O estudo analisa como técnicas de Machine Learning e Deep Learning superam defesas tradicionais na detecção de ameaças em tempo real, ao mesmo tempo que discute os riscos de ataques adversariais e a "corrida armamentista digital".</p>
+                        <p class="tecnologias">
+                            <span>Cibersegurança</span> • <span>Deep Learning</span> • <span>Detecção de Ameaças</span>
+                        </p>
+                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_como-a-intelig%C3%AAncia-artificial-atua-no-campo-activity-7406417998061748225-fJnq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank" >Ler Artigo Completo <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -79,6 +94,8 @@
             <h2 class="sublinhado">Projetos em Destaque</h2>
             <div class="projetos-container">
                 
+            
+
                 <div class="projeto">
                     <img src="./imagens/gestao viva.png" alt="Interface do Gestão Viva" onerror="this.src='https://via.placeholder.com/400x200?text=Gestao+Viva'">
                     <div class="projeto-info">
@@ -100,6 +117,17 @@
                             <span>Python + JSON</span> • <span>CRUD Otimizado</span> • <span>Automação</span>
                         </p>
                         <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_desenvolvedor-projetos-cesarschool-activity-7274854877833433088-X8F0" target="_blank">Ver projeto</a>
+                    </div>
+                </div>
+                <div class="projeto">
+                    <img src="./imagens/pocamarket.png" alt="Interface do Pocamarket" onerror="this.src='https://via.placeholder.com/400x200/F7CAC9/ffffff?text=Pocamarket'">
+                    <div class="projeto-info">
+                        <h3>Pocamarket</h3>
+                        <p>Aplicação web premium desenhada para otimizar e automatizar a compra de cards. Interface sofisticada utilizando o efeito visual Glassmorphism com a paleta Rose Quartz. Conta com um fluxo de usabilidade imersivo, calculadora matemática de conversão exata e integração direta com WhatsApp para fechamento ágil de pedidos.</p>
+                        <p class="tecnologias">
+                            <span>Glassmorphism</span> • <span>UX/UI Design</span> • <span>Automação de Vendas</span>
+                        </p>
+                        <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_o-c%C3%B3digo-pelo-c%C3%B3digo-n%C3%A3o-serve-de-nada-se-ugcPost-7431824871707353088-aE8h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ver projeto</a>
                     </div>
                 </div>
 
@@ -176,25 +204,6 @@
                 </div>
             </div>
         </section>
-
-  <section id="artigos" class="centralizar">
-    <h2 class="sublinhado">Artigos</h2>
-    <div class="projetos-container">
-        <div class="projeto">
-            <div style="height: 150px; display: flex; align-items: center; justify-content: center; background: var(--cor-fundo-secundario); font-size: 4em; color: var(--cor-destaque);">
-                <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <div class="projeto-info">
-                <h3>IA na Cibersegurança: Detecção de Fraudes e Ataques</h3>
-                <p>Artigo científico que investiga a dualidade da Inteligência Artificial na segurança da informação. O estudo analisa como técnicas de Machine Learning e Deep Learning superam defesas tradicionais na detecção de ameaças em tempo real, ao mesmo tempo que discute os riscos de ataques adversariais e a "corrida armamentista digital".</p>
-                <p class="tecnologias">
-                    <span>Cibersegurança</span> • <span>Deep Learning</span> • <span>Detecção de Ameaças</span>
-                </p>
-                <a href="https://www.linkedin.com/posts/jorge-tadeu-filho_como-a-intelig%C3%AAncia-artificial-atua-no-campo-activity-7406417998061748225-fJnq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMVR00Bz9GEvrJB0206oCvPjkTC8rS861g" target="_blank">Ler Artigo Completo</a>
-            </div>
-        </div>
-    </div>
-</section>
 
         <section id="certificados" class="centralizar">
             <h2 class="sublinhado">Certificados e Qualificações</h2>
@@ -273,7 +282,7 @@
     </main>
 
     <footer class="centralizar">
-        <p>&copy; 2025 Jorge Tadeu. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Jorge Tadeu. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
