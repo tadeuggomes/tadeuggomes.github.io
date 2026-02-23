@@ -535,12 +535,16 @@ footer {
 
     .home-botoes {
         flex-direction: column;
-        width: 100%;
         align-items: center;
+        width: 100%;
+        gap: 12px;
     }
 
     .btn-primario, .btn-secundario {
-        width: 100%;
+        width: 80%; 
+        max-width: 280px; 
+        padding: 10px 15px; 
+        font-size: 0.95em; 
         justify-content: center;
     }
 
