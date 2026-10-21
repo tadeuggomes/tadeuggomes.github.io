@@ -3,7 +3,7 @@ function iniciarEfeitoDigitacao() {
     const elementoTitulo = document.getElementById("titulo-digitado");
     if (!elementoTitulo) return;
     
-    const textoParaDigitar = 'Olá, eu sou <br> <span class="destaque-nome">Jorge Tadeu!</span>';
+    const textoParaDigitar = 'Olá, eu sou<br> <span class="destaque-nome">Jorge Tadeu Gomes da Silva Filho!</span>';
     let index = 0;
     let textoAtual = '';
     const velocidade = 80;
